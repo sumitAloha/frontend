@@ -3,6 +3,9 @@
 
 name: Node.js CI
 
+env:
+    CI : " "
+
 on:
   push:
     branches: [ "master" ]
@@ -16,9 +19,6 @@ jobs:
       matrix:
         node-version: [16.x ]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-        
-    env: 
-      process.env.CI : false
 
     steps:
     - uses: actions/checkout@v3
